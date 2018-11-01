@@ -1,0 +1,79 @@
+@import "base.less";
+#main {
+    #classify {
+        .mui-row {
+            >div {
+                a {
+                    display: block;
+                    text-align: center;
+                    padding: 10px;
+                    img {
+                        width: 70px;
+                        height: 70px;
+                    }
+                    p {
+                        padding-top: 5px;
+                        color: @font-color;
+                    }
+                }
+            }
+        }
+    }
+    
+    #banner {
+        ul {
+            li {
+                border-bottom: 1px solid #f5f5f5;
+                a {
+                    display: flex;
+                    padding: 8px;
+                    .left {
+                        width: 100px;
+                        img {
+                            width: 100px;
+                            height: 100px;
+                        }
+                    }
+                    .right {
+                        flex: 1;
+                        .product-title{
+                            color:@font-color;
+                            span{
+                                color: @main-color;
+                            }
+                        }
+                        .descript{
+                            display: flex;
+                            justify-content: space-between;
+                            .jd{
+                                color: #999;
+                            }
+                            .comment{
+                                color:#999;
+                                i{
+                                    font-size: 12px;
+                                    margin-right: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #more{
+        margin: 10px 0;
+        height: 32px;
+        text-align: center;
+        a{
+            color: #666;
+            display: block;
+            height: 100%;
+            width: 90%;
+            box-shadow: 0 0 1px #666;
+            text-align: center;
+            line-height: 32px;
+            margin: 0 auto;
+        }
+    }
+}

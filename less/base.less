@@ -1,0 +1,180 @@
+@main-color: #ff841d;
+@border-color: #f5f5f5;
+@font-color: #000;
+@bgc: #f2f2f2;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: @bgc;
+    padding-top: 88px;
+}
+
+input {
+    text-align: left;
+}
+
+img {
+    vertical-align: middle;
+}
+
+ul {
+    list-style: none;
+}
+
+#header {
+    height: 88px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    #header-top {
+        overflow: hidden;
+        border-bottom: 1px solid @border-color;
+        display: flex;
+        height: 45px;
+        .logo {
+            width: 80px; // background-color: @main-color;
+            padding-top: 10px;
+            padding-left: 6px;
+            img {
+                width: 100%;
+            }
+        }
+        form {
+            position: relative;
+            flex: 1;
+            padding: 7px 10px;
+            i {
+                width: 16px;
+                height: 16px;
+                position: absolute;
+                top: 14px;
+                left: 16px;
+                z-index: 2;
+                background-size: 220px 132px;
+                background-image: url('../images/icon_bar.png');
+                background-position: -46px -3px;
+            }
+            input {
+                padding-left: 30px;
+                height: 30px;
+                border-radius: 18px;
+                margin-bottom: 0;
+                &::placeholder {
+                    text-align: left;
+                }
+            }
+        }
+        .download {
+            margin-top: 12px;
+            width: 50px;
+            height: 20px; // line-height: 30px; 
+            a {
+                border: 1px solid @main-color;
+                border-radius: 15px;
+                line-height: 20px;
+                font-size: 12px;
+                height: 20px;
+                width: 34px;
+                display: block;
+                text-align: center;
+            }
+        }
+    }
+    #header-nav {
+        position: absolute;
+        left: 0;
+        top: 45px;
+        width: 100%;
+        height: 43px;
+        overflow: hidden;
+        background: #fdfdfc;
+        font: 12px/40px hiragino sans gb, microsoft yahei, simsun;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+        .swiper-slide {
+            padding: 0 20px;
+            width: auto;
+            a {
+                display: block;
+                color: @font-color;
+                line-height: 43px;
+                &.active::before {
+                    content: '';
+                    display: block;
+                    width: 20px;
+                    height: 3px;
+                    background-color: #f85000;
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+    }
+}
+
+#public {
+    a {
+        padding: 0 10px;
+        height: 36px;
+        background-color: #ff9d1f;
+        display: flex;
+        justify-content: space-between;
+        >span {
+            color: #fff;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 36px;
+        }
+        img {
+            margin-top: 8px;
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+#footer {
+    margin: 10px 0;
+    .footer-top {
+        display: flex;
+        a {
+            border: 1px solid #999;
+            text-align: center;
+            height: 32px;
+            line-height: 32px;
+        }
+        .login {
+            width: 30%;
+        }
+        .register {
+            width: 30%;
+        }
+        .return-top {
+            width: 40%;
+            img {
+                width: 15px;
+                height: 15px;
+                margin-bottom: 6px;
+            }
+        }
+    }
+    .footer-app {
+        font-size: 12px;
+        margin-top: 10px;
+        p {
+            color: @font-color;
+            text-align: center;
+            margin: 0;
+            a {
+                color: @font-color;
+            }
+        }
+    }
+}
